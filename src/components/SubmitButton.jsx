@@ -1,6 +1,17 @@
 import React from 'react';
 
-const SubmitButton = () => (
-    <div><SubmitButton/></div>
-)
+
+
+const SubmitButton = () => {
+    
+    
+
+    return (
+        <div >
+        <button >Check worthyness</button>
+        </div>
+    )
+}
+
+export default SubmitButton;
 
