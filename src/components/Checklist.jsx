@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ListItem from './ListItem'
 import styled from 'styled-components';
 import img from './images/balloons.jpeg';
-import SubmitButton from './SubmitButton'
+// import SubmitButton from './SubmitButton'
 
 
 const StyledBackground = styled.div`
@@ -25,8 +25,7 @@ const StyledListItem = styled.ol`
     color: white;
 `
 const StyledSubmitButton = styled.div`
-    background-color: blue
-    font-color: red
+  
 `
 
 const StyledMessage = styled.div`
@@ -40,12 +39,20 @@ const Checklist = () => {
     const [checkedCount, setCheckedCount] = useState(0)
     const percentageClicked = Math.round(checkedCount / list.length * 100)
     const isWorthy = percentageClicked > 88 ? true : false;
+    const [buttonClick, setButtonClick] = useState(null)
     
-    const handleClick = true
-    return (
+   
+        const onButtonClick = () => {
+            setButtonClick((buttonClick) => true) 
+        }
 
+        console.log(onButtonClick)
+
+    return (
+        
     <StyledBackground>
-        <StyledTitle>Relax</StyledTitle>
+        <StyledTitle>Relax...</StyledTitle>
+        <div>
         <StyledListItem>
             {list.map((element) => <ListItem
                 listItemText={element}
@@ -53,10 +60,12 @@ const Checklist = () => {
                 setCheckedCount={setCheckedCount}
             />)}
         </StyledListItem>
+        </div>
         <StyledSubmitButton>
-            <SubmitButton onClick={handleClick}/>
+            {/* <SubmitButton onClick={onButtonClick}/> */}
+            <button onClick={onButtonClick}>test button</button>
         </StyledSubmitButton>
-       {isWorthy && <StyledMessage>congratulations</StyledMessage>}
+       {(isWorthy === buttonClick) && <StyledMessage>congratulations</StyledMessage>}
     </StyledBackground>)
 };
 
