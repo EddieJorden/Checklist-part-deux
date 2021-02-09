@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import ListItem from './ListItem'
+import ListItem from './ListItem';
 import styled from 'styled-components';
 import img from './images/balloons.jpeg';
 // import SubmitButton from './SubmitButton';
+import Logger from './Logger.jsx';
+import pic from './images/guineapig.jpg'
 
 const StyledBackground = styled.div`
 	background-image: url(${img});
@@ -28,14 +30,30 @@ const StyledListItem = styled.ol`
 `
 const StyledSubmitButton = styled.div`
    align-items: center;
-   background: transparent;
-   margin-right: 15px
+   border: 2px solid white;
+   margin-right: 15px;
+   cursor: pointer;
+   width: 100px
+
 `
 
 const StyledMessage = styled.div`
     font-color: white;
     font-border: red;
     color: white;
+    margin-top: 40px;
+    font-size: 40px;
+`
+
+const StyledContainer = styled.div`
+width: 100%;
+
+//  width: 600px;
+ align-items: center;
+ display: flex;
+ flex-direction: column;
+// justify-content; center;
+padding-top: o;
 `
 
 const Checklist = () => {
@@ -44,11 +62,12 @@ const Checklist = () => {
     const percentageClicked = Math.round(checkedCount / list.length * 100);
     const isWorthy = percentageClicked > 88 ? true : false;
     const [buttonClick, setButtonClick] = useState(null);
-    const onButtonClick = () => {
-        setButtonClick((buttonClick) => true) 
-    }
+
+   
+    
     return (
     <StyledBackground>
+        <StyledContainer>
         <StyledTitle>Relax...</StyledTitle>
         <div>
         <StyledListItem>
@@ -60,15 +79,16 @@ const Checklist = () => {
         </StyledListItem>
         </div>
         
-        <StyledSubmitButton>
-            {/* <SubmitButton  buttonText='Worthy Check' setButtonClick={setButtonClick} /> */}
-  
-            <button onClick={onButtonClick}>Click to check</button>
-        </StyledSubmitButton>
-        <styledMessage>
-       {(isWorthy === buttonClick) && <StyledMessage>congratulations</StyledMessage>}
-       </styledMessage>
+        <StyledSubmitButton onClick={() => setButtonClick(true)} >
+            worthy Check
+         </StyledSubmitButton>
+        <StyledMessage>
+       {(isWorthy === buttonClick) && <StyledMessage>congratulations...<div></div></StyledMessage>}
+       </StyledMessage>
        
+       {(isWorthy === buttonClick) && <StyledMessage><div><img src={pic}/></div></StyledMessage>}
+       </StyledContainer>
+      
     </StyledBackground>)
 };
 
