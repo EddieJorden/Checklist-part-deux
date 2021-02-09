@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import img from './images/balloons.jpeg';
 // import SubmitButton from './SubmitButton';
 
-
-
 const StyledBackground = styled.div`
 	background-image: url(${img});
 	background-position: center;
@@ -29,7 +27,9 @@ const StyledListItem = styled.ol`
     color: white;
 `
 const StyledSubmitButton = styled.div`
-   
+   align-items: center;
+   background: transparent;
+   margin-right: 15px
 `
 
 const StyledMessage = styled.div`
@@ -38,23 +38,16 @@ const StyledMessage = styled.div`
     color: white;
 `
 
-
 const Checklist = () => {
-    const list = ['arbitrary item a', 'arbitrary item b']
-    const [checkedCount, setCheckedCount] = useState(0)
-    const percentageClicked = Math.round(checkedCount / list.length * 100)
+    const list = ['do you know how to relax?', 'have you ever been to a park?', 'have you ever read a book?', 'do you even own fuzzy slippers?', 'do you listen to classical music?']
+    const [checkedCount, setCheckedCount] = useState(0);
+    const percentageClicked = Math.round(checkedCount / list.length * 100);
     const isWorthy = percentageClicked > 88 ? true : false;
-    const [buttonClick, setButtonClick] = useState(null)
-    
-     const onButtonClick = () => {
+    const [buttonClick, setButtonClick] = useState(null);
+    const onButtonClick = () => {
         setButtonClick((buttonClick) => true) 
     }
-      
-
-    // console.log(SubmitButton)
-   
     return (
-        
     <StyledBackground>
         <StyledTitle>Relax...</StyledTitle>
         <div>
@@ -66,16 +59,16 @@ const Checklist = () => {
             />)}
         </StyledListItem>
         </div>
-        <div class='container'>
+        
         <StyledSubmitButton>
             {/* <SubmitButton  buttonText='Worthy Check' setButtonClick={setButtonClick} /> */}
-            
-            <button onClick={onButtonClick}>test button</button>
+  
+            <button onClick={onButtonClick}>Click to check</button>
         </StyledSubmitButton>
         <styledMessage>
        {(isWorthy === buttonClick) && <StyledMessage>congratulations</StyledMessage>}
        </styledMessage>
-        </div>
+       
     </StyledBackground>)
 };
 

@@ -14,8 +14,8 @@ const SubmitButton = ({
     // }
     
     <div>
-    <button onClick={setButtonClick((buttonClick) => true)} >{buttonText}</button>
-    
+    {/* <button onClick={setButtonClick((buttonClick) => true)} >{buttonText}</button> */}
+    <button onClick={onButtonClick}>test button</button>
     </div>
     );
 
