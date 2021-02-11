@@ -5,24 +5,19 @@ import React from 'react';
 const SubmitButton = ({
     buttonText,
     setButtonClick,
-    buttonClick
+   
     
-}) => (
+}) => {
     
-    // const onButtonClick = () => {
-    //     setButtonClick((buttonClick) => true) 
-    // }
-    
-    <div>
-    {/* <button onClick={setButtonClick((buttonClick) => true)} >{buttonText}</button> */}
-    <button onClick={onButtonClick}>test button</button>
-    </div>
-    );
-
-  
-    
+return(
 
    
+    
+    <div onClick={() => setButtonClick(true)} >{buttonText}</div>
+    
+    
+)
+    };
 
 export default SubmitButton;
 
