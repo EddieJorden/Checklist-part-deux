@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EddieJorden/Checklist-part-deux/static/css/main.4ec0ad7f.chunk.css",
+    "main.js": "/EddieJorden/Checklist-part-deux/static/js/main.7f9988fd.chunk.js",
+    "main.js.map": "/EddieJorden/Checklist-part-deux/static/js/main.7f9988fd.chunk.js.map",
+    "runtime-main.js": "/EddieJorden/Checklist-part-deux/static/js/runtime-main.a203b2fd.js",
+    "runtime-main.js.map": "/EddieJorden/Checklist-part-deux/static/js/runtime-main.a203b2fd.js.map",
+    "static/js/2.1d2929ff.chunk.js": "/EddieJorden/Checklist-part-deux/static/js/2.1d2929ff.chunk.js",
+    "static/js/2.1d2929ff.chunk.js.map": "/EddieJorden/Checklist-part-deux/static/js/2.1d2929ff.chunk.js.map",
+    "index.html": "/EddieJorden/Checklist-part-deux/index.html",
+    "static/css/main.4ec0ad7f.chunk.css.map": "/EddieJorden/Checklist-part-deux/static/css/main.4ec0ad7f.chunk.css.map",
+    "static/js/2.1d2929ff.chunk.js.LICENSE.txt": "/EddieJorden/Checklist-part-deux/static/js/2.1d2929ff.chunk.js.LICENSE.txt",
+    "static/media/balloons.cf026d49.jpeg": "/EddieJorden/Checklist-part-deux/static/media/balloons.cf026d49.jpeg",
+    "static/media/guineapig.0b1d5ef1.jpg": "/EddieJorden/Checklist-part-deux/static/media/guineapig.0b1d5ef1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a203b2fd.js",
+    "static/js/2.1d2929ff.chunk.js",
+    "static/css/main.4ec0ad7f.chunk.css",
+    "static/js/main.7f9988fd.chunk.js"
+  ]
+}
