@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import ListItem from './ListItem';
 import styled from 'styled-components';
 import img from './images/balloons.jpeg';
-// import SubmitButton from './SubmitButton';
-import Logger from './Logger.jsx';
 import pic from './images/guineapig.jpg'
 
 const StyledBackground = styled.div`
@@ -86,7 +84,7 @@ const Checklist = () => {
        {(isWorthy === buttonClick) && <StyledMessage>congratulations...<div></div></StyledMessage>}
        </StyledMessage>
        
-       {(isWorthy === buttonClick) && <StyledMessage><div><img src={pic}/></div></StyledMessage>}
+       {(isWorthy === buttonClick) && <StyledMessage><div><img src={pic} alt='hamster'/></div>    </StyledMessage>}
        </StyledContainer>
       
     </StyledBackground>)
